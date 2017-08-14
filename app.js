@@ -5,18 +5,18 @@ var cookieStand = {
   minCust: 23,
   maxCust: 65,
   avgCookies: 6.3,
-
- genRandomCust: function() {
+  hourOfDay: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
+  cookiesSold:[],
+  genRandomCust: function() {
     return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
-
-  var cookiesPerHour: function () {
-    return this.avgCookies * this.getRandomCust;
-
+  },
+  calcCookiesSold: function() {
+    for (var i = 0; i < 14; i++) {
+      var hrlyCookiesSold = this.avgCookies * this.genRandomCust();
+      this.cookiesSold.push(hrlyCookiesSold);
+    }
   }
-};
-
-
-
+}
 
   //
   // randomCustomers: Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers),
