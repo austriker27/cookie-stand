@@ -1,24 +1,29 @@
 'use strict';
 
-var cookieShops = {
-  shop: '1st and Pike',
-  minCustomers: 23,
-  maxCustomers: 65,
+var cookieStand = {
+  location: '1st and Pike',
+  minCust: 23,
+  maxCust: 65,
   avgCookies: 6.3,
-  randomCustomers: Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers),
-  cookiesPerHour: this.avgCookies * this.randomCustomers,
-}
 
-  //
-  // genRandomCust: function () {
-  //   Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
-  // }
-  //
-  // cookiesPerHour: function () {
-  //   this.avgCookies * genRandomCust;
+ genRandomCust: function() {
+    return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
+
+  var cookiesPerHour: function () {
+    return this.avgCookies * this.getRandomCust;
 
   }
 };
+
+
+
+
+  //
+  // randomCustomers: Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers),
+  // cookiesPerHour: this.avgCookies * this.randomCustomers,
+  //
+  // cookiesPerHour: function () {
+  //   this.avgCookies * genRandomCust;
 
 
 var cookieShops = {
