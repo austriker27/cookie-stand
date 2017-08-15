@@ -3,6 +3,7 @@
 //an array for all the hours the store is open
 var hourOfDay = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
+//first cookie stand
 var cookieStand = {
   location: '1st and Pike',
   minCust: 23,
@@ -14,6 +15,7 @@ var cookieStand = {
     return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
   },
   calcCookiesSold: function() {
+    this.cookiesSold = [];
     for (var i = 0; i < 14; i++) {
       var hrlyCookiesSold = this.avgCookies * this.genRandomCust();
       this.cookiesSold.push(Math.round(hrlyCookiesSold));
@@ -54,6 +56,7 @@ var cookieStand2 = {
     return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
   },
   calcCookiesSold: function() {
+    this.cookiesSold = [];
     for (var i = 0; i < 14; i++) {
       var hrlyCookiesSold = this.avgCookies * this.genRandomCust();
       this.cookiesSold.push(Math.round(hrlyCookiesSold));
@@ -93,6 +96,7 @@ var cookieStand3 = {
     return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
   },
   calcCookiesSold: function() {
+    this.cookiesSold = [];
     for (var i = 0; i < 14; i++) {
       var hrlyCookiesSold = this.avgCookies * this.genRandomCust();
       this.cookiesSold.push(Math.round(hrlyCookiesSold));
@@ -132,6 +136,7 @@ var cookieStand4 = {
     return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
   },
   calcCookiesSold: function() {
+    this.cookiesSold = [];
     for (var i = 0; i < 14; i++) {
       var hrlyCookiesSold = this.avgCookies * this.genRandomCust();
       this.cookiesSold.push(Math.round(hrlyCookiesSold));
@@ -171,6 +176,7 @@ var cookieStand5 = {
     return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
   },
   calcCookiesSold: function() {
+    this.cookiesSold = [];
     for (var i = 0; i < 14; i++) {
       var hrlyCookiesSold = this.avgCookies * this.genRandomCust();
       this.cookiesSold.push(Math.round(hrlyCookiesSold));
