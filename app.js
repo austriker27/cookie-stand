@@ -35,12 +35,20 @@ for (var i = 0; i < hourOfDay.length; i++) {
   list.appendChild(newLi);
 }
 
+//for loop to calc totals
+var sumOne = 0;
+for (var i = 0; i < cookieStand.cookiesSold.length; i++) {
+  var totalLi = document.createElement('li');
+  sumOne = sumOne + cookieStand.cookiesSold[i];
+}
+totalLi.innerText = 'Total: ' + sumOne + ' cookies';
+total.appendChild(totalLi);
+
 var cookieStand2 = {
   location: 'SeaTac Airport',
   minCust: 3,
   maxCust: 24,
   avgCookies: 1.2,
-  hourOfDay: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
   cookiesSold:[],
   genRandomCust: function() {
     return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
@@ -67,17 +75,19 @@ for (var i = 0; i < hourOfDay.length; i++) {
   list2.appendChild(newLi);
 }
 
-for (var i = 0; i < cookiesSold.length; i++) {
-  var totalLI = document.createElement('li');
-  cookiesSold[i];
+var sumOne = 0;
+for (var i = 0; i < cookieStand2.cookiesSold.length; i++) {
+  var totalLi = document.createElement('li');
+  sumOne = sumOne + cookieStand2.cookiesSold[i];
 }
+totalLi.innerText = 'Total: ' + sumOne + ' cookies';
+total2.appendChild(totalLi);
 
 var cookieStand3 = {
   location: 'Seattle Center',
   minCust: 11,
   maxCust: 38,
   avgCookies: 3.7,
-  hourOfDay: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
   cookiesSold:[],
   genRandomCust: function() {
     return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
@@ -104,12 +114,19 @@ for (var i = 0; i < hourOfDay.length; i++) {
   list3.appendChild(newLi);
 }
 
+var sumOne = 0;
+for (var i = 0; i < cookieStand3.cookiesSold.length; i++) {
+  var totalLi = document.createElement('li');
+  sumOne = sumOne + cookieStand3.cookiesSold[i];
+}
+totalLi.innerText = 'Total: ' + sumOne + ' cookies';
+total3.appendChild(totalLi);
+
 var cookieStand4 = {
   location: 'Capitol Hill',
   minCust: 20,
   maxCust: 38,
   avgCookies: 2.3,
-  hourOfDay: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
   cookiesSold:[],
   genRandomCust: function() {
     return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
@@ -136,12 +153,19 @@ for (var i = 0; i < hourOfDay.length; i++) {
   list4.appendChild(newLi);
 }
 
+var sumOne = 0;
+for (var i = 0; i < cookieStand4.cookiesSold.length; i++) {
+  var totalLi = document.createElement('li');
+  sumOne = sumOne + cookieStand4.cookiesSold[i];
+}
+totalLi.innerText = 'Total: ' + sumOne + ' cookies';
+total4.appendChild(totalLi);
+
 var cookieStand5 = {
   location: 'Alki',
   minCust: 2,
   maxCust: 16,
   avgCookies: 4.6,
-  hourOfDay: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
   cookiesSold:[],
   genRandomCust: function() {
     return Math.floor(Math.random() * this.maxCust - this.minCust) + this.minCust;
@@ -167,3 +191,11 @@ for (var i = 0; i < hourOfDay.length; i++) {
   newLi.innerText = hourOfDay[i] + ': ' + cookieStand5.cookiesSold[i] + ' cookies sold.';
   list5.appendChild(newLi);
 }
+
+var sumOne = 0;
+for (var i = 0; i < cookieStand5.cookiesSold.length; i++) {
+  var totalLi = document.createElement('li');
+  sumOne = sumOne + cookieStand5.cookiesSold[i];
+}
+totalLi.innerText = 'Total: ' + sumOne + ' cookies';
+total5.appendChild(totalLi);
