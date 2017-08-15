@@ -46,5 +46,12 @@ a {
 }
 
 .locations {
-    list-style: none;
+  margin: 2% 0 0 0;
+  list-style: none;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.5em;
+  margin: 10% 0 0 0;
 }
