@@ -1,5 +1,8 @@
 'use strict';
 
+//an array for all the hours the store is open
+var hourOfDay = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+
 var cookieStand = {
   location: '1st and Pike',
   minCust: 23,
@@ -25,21 +28,14 @@ cookieStand.calcCookiesSold();
 var stores = document.getElementById('shopLocation');
 stores.textContent = cookieStand.location;
 
-//an array for all the hours the store is open
-var hourOfDay = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-
 //for loop that should add list items for the hour of day and sales
-
-// var ul = document.createElement('ul');
-// ul.id = 'list';
-
 for (var i = 0; i < hourOfDay.length; i++) {
   var newLi = document.createElement('li');
   newLi.innerText = hourOfDay[i] + ': ' + cookieStand.cookiesSold[i] + ' cookies sold.';
   list.appendChild(newLi);
 }
 
-var cookieShops = {
+var cookieShops2 = {
   shop: 'SeaTac Airport',
   minCustomers: 3,
   maxCustomers: 24,
@@ -57,7 +53,7 @@ var cookieShops = {
   }
 };
 
-var cookieShops = {
+var cookieShops3 = {
   shop: 'Seattle Center',
   minCustomers: 11,
   maxCustomers: 38,
@@ -75,7 +71,7 @@ var cookieShops = {
   }
 };
 
-var cookieShops = {
+var cookieShops4 = {
   shop: 'Capitol Hill',
   minCustomers: 20,
   maxCustomers: 38,
@@ -93,7 +89,7 @@ var cookieShops = {
   }
 };
 
-var cookieShops = {
+var cookieShops5 = {
   shop: 'Alki',
   minCustomers: 2,
   maxCustomers: 16,
