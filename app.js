@@ -13,7 +13,7 @@ var cookieStand = {
   calcCookiesSold: function() {
     for (var i = 0; i < 14; i++) {
       var hrlyCookiesSold = this.avgCookies * this.genRandomCust();
-      this.cookiesSold.push(hrlyCookiesSold);
+      this.cookiesSold.push(Math.round(hrlyCookiesSold));
     }
   }
 };
@@ -29,10 +29,14 @@ stores.textContent = cookieStand.location;
 var hourOfDay = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 //for loop that should add list items for the hour of day and sales
+
+// var ul = document.createElement('ul');
+// ul.id = 'list';
+
 for (var i = 0; i < hourOfDay.length; i++) {
   var newLi = document.createElement('li');
-  newLi.innerText = hourOfDay + ': ' + cookiesSold[0] + 'cookies sold.';
-  appendChild(newLi);
+  newLi.innerText = hourOfDay[i] + ': ' + cookieStand.cookiesSold[i] + ' cookies sold.';
+  list.appendChild(newLi);
 }
 
 var cookieShops = {
