@@ -1,7 +1,16 @@
 'use strict';
 
 //an array for all the hours the store is open
-var hourOfDay = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var hourOfDay = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
+
+// set up an array for stores
+
+var stores = [];
+
+// create constructor with properties
+function Stores(location, minCust, maxCust, avgCookies, cookiesSold) {
+
+}
 
 //first cookie stand
 var pike = {
