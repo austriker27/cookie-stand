@@ -7,7 +7,7 @@ var storeHrs = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '1
 var stores = ['pike', 'seatac', 'seattle center', 'capitol hill', 'alki'];
 
 // create constructor with properties
-function Stores(location, minCust, maxCust, avgCookies, cookiesSold) {
+function Stores(location, minCust, maxCust, avgCookies) {
   this.location = location;
   this.minCust = minCust;
   this.maxCust = maxCust;
@@ -48,6 +48,25 @@ function Stores(location, minCust, maxCust, avgCookies, cookiesSold) {
     list.appendChild(listItems);
 };
 
+for (var i = 0; i < stores.length; i++) {
+  stores[i].dailySalesReport();
+}
+
+var pike = new Store ('1st and Pike', 23, 65, 6.3);
+var seatac = new Store ('SeaTac Airport', 3, 24, 1.2);
+var seattleCenter = new Store ('Seattle Center', 11, 38, 3.7);
+var capitolHill = new Store ('Capitol Hill', 20, 38, 2.3);
+var alki = new Store ('Alki', 2, 16, 4.6);
+
+
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
