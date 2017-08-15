@@ -12,12 +12,19 @@ box-sizing: border-box;
 
 }
 
+p {
+  margin: 4% 0 0 0;
+}
+
 .data {
   font-family: 'Roboto', sans-serif;
+  font-color: rgb(49, 56, 91);
 }
 
 body {
   font-family: 'Libre Baskerville', serif;
+  margin: 5%;
+  font-color: black;
 }
 
 h1 {
@@ -25,5 +32,19 @@ h1 {
 }
 
 .contact {
-  margin: 5%;  
+  margin: 5% 0 0 0;
+}
+
+.tables {
+  background-color: white;
+  background-blend-mode: lighten;
+}
+
+a {
+  background-color: none;
+  text-decoration: none;
+}
+
+.locations {
+    list-style: none;
 }
