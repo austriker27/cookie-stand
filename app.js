@@ -47,7 +47,7 @@ var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
 var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
 var alki = new Store('Alki', 2, 16, 4.6);
 
-//table header:
+//table header that lists out the names of the places
 function render() {
   var headerSpot = document.getElementById('sales-list');
   var salesTable = document.createElement('table');
@@ -67,7 +67,7 @@ function render() {
 }
 render();
 
-//table footer
+//filling the table footer with cookie totals
 function tableFooter() {
   var footerSpot = document.getElementsByTagName('table')[1];
   var totalsTable = document.createElement('tr');
@@ -93,12 +93,12 @@ tableFooter();
 // send user input from form into constructor
 function harvestAndPost(event) {
   event.preventDefault();
-  var store = new Store();
-  store.store = this.elements['location'].value;
-  store.minCustomers = this.elements['minCustomers'].value;
-  store.maxCustomers = this.elements['maxCustomers'].value;
-  store.avgCustomers = this.elements['avgCustomers'].value;
-  post.dailySalesReport();
+  var newStore = new Store();
+  newStore.store = this.elements['location'].value;
+  newStore.minCust = this.elements['minCustomers'].value;
+  newStore.maxCust = this.elements['maxCustomers'].value;
+  newStore.avgCookies = this.elements['avgCookiesPerCust'].value;
+  newStore.dailySalesReport();
 }
 
 //once submit is submitted run the harvest and post function
