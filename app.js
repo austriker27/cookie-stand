@@ -18,37 +18,26 @@ function Store(store, minCust, maxCust, avgCookies) {
     this.totalCookiesSold = 0;
     for (var i = 0; i < storeHrs.length; i++) {
       var hourlyCookieSales = Math.ceil(this.avgCookies * this.genRandomCust());
-      console.log('this is hourly Cookies' + hourlyCookieSales);
+      // console.log('this is hourly Cookies' + hourlyCookieSales);
       this.cookiesSold.push(hourlyCookieSales);
-      console.log('this is cookies Sold' + this.cookiesSold);
+      // console.log('this is cookies Sold' + this.cookiesSold);
       this.totalCookiesSold += hourlyCookieSales;
-      console.log('this is total cookies sold' + this.totalCookiesSold);
+      // console.log('this is total cookies sold' + this.totalCookiesSold);
     }
   };
   this.dailySalesReport = function() {
-    // this.calcCookiesSold();
-    // var placeSpot = document.getElementById('sales-list');
-    //
-    // var locationName = document.createElement('h2');
-    // locationName.innerText = this.store;
-    // placeSpot.appendChild(locationName);
-    //
-    // var list = document.createElement('ul');
-    // placeSpot.appendChild(list);
-    //
-    // for (var i = 0; i < storeHrs.length; i++) {
-    //   var listItems = document.createElement('li');
-    //   listItems.innerText = storeHrs[i] + ': ' + this.cookiesSold[i] + ' cookies';
-    //   list.appendChild(listItems);
-    // }
-    //
-    // var listItems = document.createElement('li');
-    // listItems.innerText = 'Total: ' + this.totalCookiesSold + ' cookies';
-    // list.appendChild(listItems);
+    this.calcCookiesSold();
+    var bodyHead = document.getElementsByTagName('table')[0];
+    var tableBodyHead = document.createElement('tr');
+    bodyHead.appendChild(tableBodyHead);
+    var rowStore = document.createElement('tr');
+    rowStore.innerHTML = Store.store;
+    for (var i = 0; i < storeHrs.length; i++) {
+      var storeSales = document.createElement('tr');
+      storeSales.innerHTML = this.cookiesSold[i];
+      bodyHead.appendChild(storeSales);
+    }
   };
-
-  this.calcCookiesSold();
-
 };
 
 // set up an array for stores
@@ -60,14 +49,6 @@ var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
 var alki = new Store('Alki', 2, 16, 4.6);
 
 var stores = [pike, seatac, seattleCenter, capitolHill, alki];
-//
-function forloop() {
-  for (var i = 0; i < stores.length; i++) {
-    console.log(stores);
-    stores[i].dailySalesReport();
-  }
-}
-forloop();
 
 function tableHead() {
   var headerSpot = document.getElementById('sales-list');
@@ -89,15 +70,31 @@ function tableHead() {
 
 tableHead();
 
-function tableBody () {
-  var tableBodyHead = document.getElementByTagName('table');
-  tableRow.appendChild(tableBodyHead);
-  var rowStore = document.createElement('tr');
-
+function tableFooter() {
+  var footerSpot = document.getElementByTagName('table');
+  var totalsTable = document.createElement('tr');
+  totalsTable.innerHTML = 'totals';
+  footerSpot.appendChild(totalsTable);
   for (var i = 0; i < storeHrs.length; i++) {
-    var storeName = document.innerHTML ()
-    var storeSales = document.createElement('th');
-    storeSales.innerHTML = storeSales[i];
-    tableRow.appendChild(storeSales);
+    var storeTotals = document.createElement('tr');
+    storeTotals.innerHTML = this.totalCookiesSold;
+    footerSpot.appendChild(storeTotals);
   }
 }
+
+//
+// function forloop() {
+//   for (var i = 0; i < stores.length; i++) {
+//     // console.log(stores);
+//     stores[i].dailySalesReport();
+//   }
+// };
+// forloop();
+// replacing for loop with manual function calls because for loop hates me
+tableHead();
+pike.dailySalesReport();
+seatac.dailySalesReport();
+seattleCenter.dailySalesReport();
+capitolHill.dailySalesReport();
+alki.dailySalesReport();
+tableFooter();
