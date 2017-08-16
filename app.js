@@ -40,15 +40,12 @@ function Store(store, minCust, maxCust, avgCookies) {
   stores.push(this);
 };
 
-// set up an array for stores
-
+//prior instances of stores
 var pike = new Store('1st and Pike', 23, 65, 6.3);
 var seatac = new Store('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
 var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
 var alki = new Store('Alki', 2, 16, 4.6);
-
-// var stores = [pike, seatac, seattleCenter, capitolHill, alki];
 
 //table header:
 function render() {
@@ -68,7 +65,6 @@ function render() {
   topRight.innerHTML = 'Daily Location Total';
   tableRow.appendChild(topRight);
 }
-
 render();
 
 //table footer
@@ -86,10 +82,12 @@ function tableFooter() {
   footerSpot.appendChild(bottomRight);
 };
 
+//for loop that runs daily cookie sales for every store
 for (var i = 0; i < stores.length; i++) {
   stores[i].dailySalesReport();
 }
 
+//calling the table footer
 tableFooter();
 
 // send user input from form into constructor
@@ -103,5 +101,6 @@ function harvestAndPost(event) {
   post.dailySalesReport();
 }
 
+//once submit is submitted run the harvest and post function
 var submitInfo = document.getElementById('salesForm');
 submitInfo.addEventListener('submit', harvestAndPost);
