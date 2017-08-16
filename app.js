@@ -69,6 +69,7 @@ function render() {
 
 render();
 
+//table footer
 function tableFooter() {
   var footerSpot = document.getElementsByTagName('table')[0];
   var totalsTable = document.createElement('tr');
