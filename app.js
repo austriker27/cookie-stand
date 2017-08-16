@@ -2,6 +2,7 @@
 
 //an array for all the hours the store is open
 var storeHrs = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
+var stores = [];
 
 // create constructor with properties
 function Store(store, minCust, maxCust, avgCookies) {
@@ -24,7 +25,7 @@ function Store(store, minCust, maxCust, avgCookies) {
   };
   this.dailySalesReport = function() {
     this.calcCookiesSold();
-    var bodyHead = document.getElementsByTagName('table')[0];
+    var bodyHead = document.getElementsByTagName('table')[1];
     var tableBodyHead = document.createElement('tr');
     bodyHead.appendChild(tableBodyHead);
     var rowStore = document.createElement('td');
@@ -36,6 +37,7 @@ function Store(store, minCust, maxCust, avgCookies) {
       tableBodyHead.appendChild(storeSales);
     }
   };
+  stores.push(this);
 };
 
 // set up an array for stores
@@ -46,7 +48,7 @@ var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
 var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
 var alki = new Store('Alki', 2, 16, 4.6);
 
-var stores = [pike, seatac, seattleCenter, capitolHill, alki];
+// var stores = [pike, seatac, seattleCenter, capitolHill, alki];
 
 //table header:
 function render() {
@@ -71,7 +73,7 @@ render();
 
 //table footer
 function tableFooter() {
-  var footerSpot = document.getElementsByTagName('table')[0];
+  var footerSpot = document.getElementsByTagName('table')[1];
   var totalsTable = document.createElement('tr');
   footerSpot.appendChild(totalsTable);
   for (var i = 0; i < storeHrs.length; i++) {
@@ -84,18 +86,22 @@ function tableFooter() {
   footerSpot.appendChild(bottomRight);
 };
 
-// function forloop() {
-//   for (var i = 0; i < stores.length; i++) {
-//     // console.log(stores);
-//     stores[i].dailySalesReport();
-//   }
-// };
-// forloop();
-// replacing for loop with manual function calls because for loop hates me
+for (var i = 0; i < stores.length; i++) {
+  stores[i].dailySalesReport();
+}
 
-pike.dailySalesReport();
-seatac.dailySalesReport();
-seattleCenter.dailySalesReport();
-capitolHill.dailySalesReport();
-alki.dailySalesReport();
 tableFooter();
+
+// send user input from form into constructor
+function harvestAndPost(event) {
+  event.preventDefault();
+  var store = new Store();
+  store.store = this.elements['location'].value;
+  store.minCustomers = this.elements['minCustomers'].value;
+  store.maxCustomers = this.elements['maxCustomers'].value;
+  store.avgCustomers = this.elements['avgCustomers'].value;
+  post.dailySalesReport();
+}
+
+var submitInfo = document.getElementById('salesForm');
+submitInfo.addEventListener('submit', harvestAndPost);

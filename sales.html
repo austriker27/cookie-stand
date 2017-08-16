@@ -3,25 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Seattle's finest Salmon Cookies by Pat</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
 
     <h1>Seattle's Finest Salmon Cookies by Pat</h1>
 
-    <form class="" action="index.html" method="post">
+    <form id="salesForm" action="index.html" method="post">
       <table>
         <tr>
           <td>Location Name:</td>
           <td><input type="text" name="location" class="field" placeholder="Shop Location"/></td>
         </tr>
         <tr>
-          <td>Minimum Customers:</td>
+          <td>Minimum Customers Per Hour:</td>
+          <td><input type="number" name="minCustomers" class="field" placeholder="Select Number of Customers"/></td>
         </tr>
         <tr>
-          <td>Maximum Customers:</td>
+          <td>Maximum Customers Per Hour:</td>
+          <td><input type="number" name="maxCustomers" class="field" placeholder="Select Number of Customers"</td>
         </tr>
         <tr>
-          <td>Average Customers:</td>
+          <td>Average Cookies Per Customer:</td>
+          <td><input type="number" step= "0.1" name="AvgCustomers" class="field" placeholder="Select Average Cookies"/></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Submit Store Information" id="submit"></td>
         </tr>
       </table>
 
@@ -29,7 +38,7 @@
 
 
     <h2>Cookies per location per hour</h2>
-    <section id="sales-list">
+    <section id="sales-list" class="data">
     </section>
 
 
