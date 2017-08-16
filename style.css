@@ -59,3 +59,7 @@ footer {
 th {
   border: 10px solid red;
 }
+
+table *{
+  border: 1px solid black;
+}
