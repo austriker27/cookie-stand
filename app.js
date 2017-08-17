@@ -36,6 +36,9 @@ function Store(store, minCust, maxCust, avgCookies) {
       storeSales.innerText = this.cookiesSold[i];
       tableBodyHead.appendChild(storeSales);
     }
+    var totalCookiesPerStore = document.createElement('tr');
+    totalCookiesPerStore.innerText = this.totalCookiesSold;
+    tableBodyHead.appendChild(totalCookiesPerStore);
   };
   stores.push(this);
 };
@@ -95,10 +98,11 @@ function harvestAndPost(event) {
   event.preventDefault();
   var newStore = new Store();
   newStore.store = this.elements['location'].value;
-  newStore.minCust = this.elements['minCustomers'].value;
-  newStore.maxCust = this.elements['maxCustomers'].value;
-  newStore.avgCookies = this.elements['avgCookiesPerCust'].value;
+  newStore.minCust = parseInt(this.elements['minCustomers'].value);
+  newStore.maxCust = parseInt(this.elements['maxCustomers'].value);
+  newStore.avgCookies = parseFloat(this.elements['avgCookiesPerCust'].value);
   newStore.dailySalesReport();
+  salesForm.reset();
 }
 
 //once submit is submitted run the harvest and post function
