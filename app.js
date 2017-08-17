@@ -95,10 +95,11 @@ function harvestAndPost(event) {
   event.preventDefault();
   var newStore = new Store();
   newStore.store = this.elements['location'].value;
-  newStore.minCust = this.elements['minCustomers'].value;
-  newStore.maxCust = this.elements['maxCustomers'].value;
-  newStore.avgCookies = this.elements['avgCookiesPerCust'].value;
+  newStore.minCust = parseInt(this.elements['minCustomers'].value);
+  newStore.maxCust = parseInt(this.elements['maxCustomers'].value);
+  newStore.avgCookies = parseInt(this.elements['avgCookiesPerCust'].value);
   newStore.dailySalesReport();
+  form.reset();
 }
 
 //once submit is submitted run the harvest and post function
