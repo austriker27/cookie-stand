@@ -36,6 +36,9 @@ function Store(store, minCust, maxCust, avgCookies) {
       storeSales.innerText = this.cookiesSold[i];
       tableBodyHead.appendChild(storeSales);
     }
+    var totalCookiesPerStore = document.createElement('tr');
+    totalCookiesPerStore.innerText = this.totalCookiesSold;
+    tableBodyHead.appendChild(totalCookiesPerStore);
   };
   stores.push(this);
 };
