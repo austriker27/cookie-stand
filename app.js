@@ -97,9 +97,9 @@ function harvestAndPost(event) {
   newStore.store = this.elements['location'].value;
   newStore.minCust = parseInt(this.elements['minCustomers'].value);
   newStore.maxCust = parseInt(this.elements['maxCustomers'].value);
-  newStore.avgCookies = parseInt(this.elements['avgCookiesPerCust'].value);
+  newStore.avgCookies = parseFloat(this.elements['avgCookiesPerCust'].value);
   newStore.dailySalesReport();
-  form.reset();
+  salesForm.reset();
 }
 
 //once submit is submitted run the harvest and post function
