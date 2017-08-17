@@ -2,6 +2,7 @@
 
 //an array for all the hours the store is open
 var storeHrs = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
+var stores = [];
 
 // create constructor with properties
 function Store(store, minCust, maxCust, avgCookies) {
@@ -24,7 +25,7 @@ function Store(store, minCust, maxCust, avgCookies) {
   };
   this.dailySalesReport = function() {
     this.calcCookiesSold();
-    var bodyHead = document.getElementsByTagName('table')[0];
+    var bodyHead = document.getElementsByTagName('table')[1];
     var tableBodyHead = document.createElement('tr');
     bodyHead.appendChild(tableBodyHead);
     var rowStore = document.createElement('td');
@@ -36,19 +37,17 @@ function Store(store, minCust, maxCust, avgCookies) {
       tableBodyHead.appendChild(storeSales);
     }
   };
+  stores.push(this);
 };
 
-// set up an array for stores
-
+//prior instances of stores
 var pike = new Store('1st and Pike', 23, 65, 6.3);
 var seatac = new Store('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
 var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
 var alki = new Store('Alki', 2, 16, 4.6);
 
-var stores = [pike, seatac, seattleCenter, capitolHill, alki];
-
-//table header:
+//table header that lists out the names of the places
 function render() {
   var headerSpot = document.getElementById('sales-list');
   var salesTable = document.createElement('table');
@@ -66,12 +65,11 @@ function render() {
   topRight.innerHTML = 'Daily Location Total';
   tableRow.appendChild(topRight);
 }
-
 render();
 
-//table footer
+//filling the table footer with cookie totals
 function tableFooter() {
-  var footerSpot = document.getElementsByTagName('table')[0];
+  var footerSpot = document.getElementsByTagName('table')[1];
   var totalsTable = document.createElement('tr');
   footerSpot.appendChild(totalsTable);
   for (var i = 0; i < storeHrs.length; i++) {
@@ -84,18 +82,25 @@ function tableFooter() {
   footerSpot.appendChild(bottomRight);
 };
 
-// function forloop() {
-//   for (var i = 0; i < stores.length; i++) {
-//     // console.log(stores);
-//     stores[i].dailySalesReport();
-//   }
-// };
-// forloop();
-// replacing for loop with manual function calls because for loop hates me
+//for loop that runs daily cookie sales for every store
+for (var i = 0; i < stores.length; i++) {
+  stores[i].dailySalesReport();
+}
 
-pike.dailySalesReport();
-seatac.dailySalesReport();
-seattleCenter.dailySalesReport();
-capitolHill.dailySalesReport();
-alki.dailySalesReport();
+//calling the table footer
 tableFooter();
+
+// send user input from form into constructor
+function harvestAndPost(event) {
+  event.preventDefault();
+  var newStore = new Store();
+  newStore.store = this.elements['location'].value;
+  newStore.minCust = this.elements['minCustomers'].value;
+  newStore.maxCust = this.elements['maxCustomers'].value;
+  newStore.avgCookies = this.elements['avgCookiesPerCust'].value;
+  newStore.dailySalesReport();
+}
+
+//once submit is submitted run the harvest and post function
+var submitInfo = document.getElementById('salesForm');
+submitInfo.addEventListener('submit', harvestAndPost);
