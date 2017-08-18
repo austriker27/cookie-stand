@@ -123,17 +123,10 @@ th {
   border: 1px solid black;
 }
 
-.salesItem img{
-  height: 200px;
-  border-radius: 20px;
+.floatRight {
+  float: right;
+}
+
+.floatLeft {
   float: left;
-}
-
-.salesItem .itemTitle {
-  display: block;
-
-}
-
-.salesItem h4 {
-  display: block;
 }

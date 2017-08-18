@@ -1,0 +1,51 @@
+
+.salesItem {
+  margin: 2% 2% 2% 2%;
+  width: 40%;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 20px;
+  min-width: 100px;
+}
+
+.salesItem img{
+  height: 200px;
+  border-radius: 20px;
+  float: left;
+  margin: 2%;
+}
+
+.salesItem .itemTitle {
+  display: block;
+
+}
+
+.salesItem h4 {
+  display: block;
+  font-style:
+}
+
+.salesItem .itemPrice p {
+  position: relative;
+  bottom: 1em;
+  top: 60px;
+}
+
+.salesItem .itemBuyButton {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 40%;
+  float: right;
+  margin: 2%;
+  cursor: pointer;
+  padding: 3% 3% 3% 3%;
+  text-align: center;
+}
+
+.salesItem .itemBuyButton p {
+  padding: 1% 1% 1% 1%;
+}
+
+.salesItem .itemDescription {
+  padding: 1% 1% 1% 1%;
+}
