@@ -7,10 +7,13 @@ p {
   margin-top: 2%;
 }
 
-#sales-list *{
-  border:
-  width: 100%;
+#sales-list {
+  background-color: rgba(160, 87, 210, 0.43);
+  border-radius: 20px;
+  margin: 2% 2% 2% 2%;
+  padding: 2% 2% 2% 2%;
 }
+
 
 #sales-list tr:nth-child(even) {
   background: rgb(160, 87, 210);
