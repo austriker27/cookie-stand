@@ -19,6 +19,7 @@ nav .topnav {
 ul.topnav {
   margin: 0px;
   background: black;
+  padding: 0px 0px 0px 0px;
 }
 
 nav .topnav li {
@@ -30,6 +31,7 @@ nav .topnav li {
   font-size: 0.9em;
   background-color: black;
   text-align: center;
+  border-right: 2px solid white;
 }
 
 nav .topnav li a {
@@ -92,11 +94,6 @@ h1 {
 a {
   background-color: none;
   text-decoration: none;
-}
-
-.locations {
-  margin: 2% 0 0 0;
-  list-style: none;
 }
 
 footer {
