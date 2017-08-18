@@ -63,7 +63,8 @@ nav .topnav li:hover {
 }
 
 .highlights {
-
+  font-family: 'Rubik', sans-serif;
+  color: rgb(160, 87, 210);
 }
 
 p {
