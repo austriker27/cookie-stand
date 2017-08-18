@@ -1,11 +1,15 @@
 
 .salesItem {
   margin: 2% 2% 2% 2%;
-  width: 40%;
-  height: 300px;
+  width: 45%;
+  height: 330px;
   border: 1px solid black;
   border-radius: 20px;
   min-width: 100px;
+}
+
+#buyMerch {
+  text-align: center;
 }
 
 .salesItem img{
@@ -17,17 +21,19 @@
 
 .salesItem .itemTitle {
   display: block;
-
 }
 
-.salesItem h4 {
+.salesItem h3 {
   display: block;
-  font-style:
+  font-size: 1.3em;
+}
+
+.salesItem .itemDescription {
+  font-style: italic;
 }
 
 .salesItem .itemPrice p {
   position: relative;
-  bottom: 1em;
   top: 60px;
 }
 
