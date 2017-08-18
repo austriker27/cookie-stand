@@ -1,0 +1,23 @@
+p {
+  margin: 5% 10% 5% 10%;
+}
+
+#salesForm {
+  border: none;
+  margin-top: 2%;
+}
+
+#sales-list *{
+  border:
+  width: 100%;
+}
+
+#sales-list tr:nth-child(even) {
+  background: rgb(160, 87, 210);
+}
+
+#submit {
+  border-radius: 20px;
+  background-color: rgb(160, 87, 210);
+  padding: 10px 10px 10px 10px;
+}

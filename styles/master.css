@@ -103,21 +103,9 @@ footer {
   position
 }
 
-th {
-  border: 10px solid red;
-}
-
 .welcome {
   text-align: center;
   padding: 5%;
-}
-
-#salesForm {
-  border: none;
-}
-
-#sales-list *{
-  border: 1px solid black;
 }
 
 .floatRight {
