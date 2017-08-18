@@ -6,6 +6,9 @@ This project built a website for Pat who sells delicious salmon cookies in Seatt
 ## Built With
 
 * [Atom](www.atom.io) - The text editor used
+* [Mac](www.apple.com) - built a classic 2011 Apple MacBook Air
+* [Honey Crisps] - The apples consumed
+* [soylent](www.soylent.com) - The drinkable meal replacement that was breakfast, lunch and dinner.
 
 
 ## Versioning
