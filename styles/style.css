@@ -1,0 +1,139 @@
+* {
+box-sizing: border-box;
+}
+
+.topHeader {
+  margin: 0% 2% 0% 0%;
+  padding: 2% 2% 2% 2%;
+  display: block;
+  background-color: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);;
+  text-align: center;
+  width: 100%
+}
+
+nav .topnav {
+  background-color: gray;
+  overflow: hidden;
+}
+
+ul.topnav {
+  margin: 0px;
+  background: black;
+}
+
+nav .topnav li {
+  list-style: none;
+  float: left;
+  display: block;
+  padding: 1% 1% 1% 1%;
+  margin: 0px;
+  font-size: 0.9em;
+  background-color: black;
+  text-align: center;
+}
+
+nav .topnav li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+nav .topnav li:hover {
+  background-color: #9cc5fc;
+  color: black;
+}
+
+/*nav .topnav li a:hover {
+  background-color: white;
+  color: black;
+}*/
+
+.logo {
+  opacity: 0.7;
+  float: right;
+  text-align: center;
+  margin: 10% 10% 10% 10%;
+}
+
+.clear {
+  clear: both;
+}
+
+.highlights {
+
+}
+
+p {
+  margin: 4% 0 0 0;
+}
+
+.data {
+  font-family: 'Roboto', sans-serif;
+  font-color: rgb(49, 56, 91);
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  margin: 0%;
+  color: black;
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+
+}
+
+h1 {
+  letter-spacing: 10px;
+}
+
+.contact {
+  margin: 5% 0 0 0;
+}
+
+a {
+  background-color: none;
+  text-decoration: none;
+}
+
+.locations {
+  margin: 2% 0 0 0;
+  list-style: none;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.5em;
+  margin: 10% 0 0 0;
+  position
+}
+
+th {
+  border: 10px solid red;
+}
+
+.welcome {
+  text-align: center;
+  padding: 5%;
+}
+
+#salesForm {
+  border: none;
+}
+
+#sales-list *{
+  border: 1px solid black;
+}
+
+.salesItem img{
+  height: 200px;
+  border-radius: 20px;
+  float: left;
+}
+
+.salesItem .itemTitle {
+  display: block;
+
+}
+
+.salesItem h4 {
+  display: block;
+}
