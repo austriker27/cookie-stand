@@ -1,0 +1,23 @@
+.hrsOp {
+  margin: 5% 5% 5% 5%;
+  text-transform: center;
+}
+
+#people {
+  float: right;
+  height: 300px;
+  margin: 2% 20% 2% 20%;
+  border-radius: 20px;
+}
+
+ul .locations {
+  margin: 2% 0 0 0;
+  list-style: none;
+  width: 40%;
+  float: left;
+}
+
+.hrsOp {
+  width: 40%;
+  float: left;
+}

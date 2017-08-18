@@ -1,0 +1,57 @@
+
+.salesItem {
+  margin: 2% 2% 2% 2%;
+  width: 45%;
+  height: 330px;
+  border: 1px solid black;
+  border-radius: 20px;
+  min-width: 100px;
+}
+
+#buyMerch {
+  text-align: center;
+}
+
+.salesItem img{
+  height: 200px;
+  border-radius: 20px;
+  float: left;
+  margin: 2%;
+}
+
+.salesItem .itemTitle {
+  display: block;
+}
+
+.salesItem h3 {
+  display: block;
+  font-size: 1.3em;
+}
+
+.salesItem .itemDescription {
+  font-style: italic;
+}
+
+.salesItem .itemPrice p {
+  position: relative;
+  top: 60px;
+}
+
+.salesItem .itemBuyButton {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 40%;
+  float: right;
+  margin: 2%;
+  cursor: pointer;
+  padding: 3% 3% 3% 3%;
+  text-align: center;
+}
+
+.salesItem .itemBuyButton p {
+  padding: 1% 1% 1% 1%;
+}
+
+.salesItem .itemDescription {
+  padding: 1% 1% 1% 1%;
+}
