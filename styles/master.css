@@ -116,3 +116,9 @@ footer {
 .floatLeft {
   float: left;
 }
+
+.contact-logos {
+  border: 1px solid black;
+  border-radius: 100%;
+  margin: 2%;
+}
