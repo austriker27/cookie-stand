@@ -10,8 +10,9 @@ p {
 #sales-list {
   background-color: rgba(160, 87, 210, 0.43);
   border-radius: 20px;
-  margin: 2% 2% 2% 2%;
+  margin: 2% 5% 2% 5%;
   padding: 2% 2% 2% 2%;
+  width: 90%;
 }
 
 
@@ -21,6 +22,7 @@ p {
 
 #submit {
   border-radius: 20px;
-  background-color: rgb(160, 87, 210);
+  background-color: rgba(160, 87, 210, 0.43);
   padding: 10px 10px 10px 10px;
+  border: 1px solid rgb(160, 87, 210);
 }
